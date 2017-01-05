@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SoftwareTechnologyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Decendalization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Member" Relationship="Self.FK_Account_Member1" FromRole="Account" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="MenuLevel" Type="Int32" />
+    <Property Name="Depth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="News" Relationship="Self.FK_News_Category" FromRole="Category" ToRole="News" />
+  </EntityType>
+  <EntityType Name="CateMember1">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="CateTinCongNghe" Type="Int32" />
+    <Property Name="CateMicrosoft" Type="Int32" />
+    <Property Name="CateSun" Type="Int32" />
+    <Property Name="CateCongNgheMoi" Type="Int32" />
+    <NavigationProperty Name="Member" Relationship="Self.FK_CateMember1_Member" FromRole="CateMember1" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="FeedbackID" />
+    </Key>
+    <Property Name="FeedbackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewsID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameReader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="DateComment" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="News" Relationship="Self.FK_Feedback_News" FromRole="Feedback" ToRole="News" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LinkImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ImageAdvertising" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IdentityCard" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK_Account_Member1" FromRole="Member" ToRole="Account" />
+    <NavigationProperty Name="CateMember1" Relationship="Self.FK_CateMember1_Member" FromRole="Member" ToRole="CateMember1" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsID" />
+    </Key>
+    <Property Name="NewsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Author" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Posttime" Type="DateTime" Precision="3" />
+    <Property Name="Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NumRead" Type="Int32" />
+    <Property Name="feedback" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_News_Category" FromRole="News" ToRole="Category" />
+    <NavigationProperty Name="Feedbacks" Relationship="Self.FK_Feedback_News" FromRole="News" ToRole="Feedback" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="StatisticID" />
+    </Key>
+    <Property Name="StatisticID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTimeNews" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostMostRead" Type="Int32" Nullable="false" />
+    <Property Name="VisitNumber" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Account_Member1">
+    <End Role="Member" Type="Self.Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CateMember1_Member">
+    <End Role="Member" Type="Self.Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CateMember1" Type="Self.CateMember1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="CateMember1">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Feedback_News">
+    <End Role="News" Type="Self.News" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="NewsID" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="NewsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SoftwareTechnologyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="CateMember1" EntityType="Self.CateMember1" />
+    <EntitySet Name="Feedbacks" EntityType="Self.Feedback" />
+    <EntitySet Name="Images" EntityType="Self.Image" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Statistics" EntityType="Self.Statistic" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Account_Member1" Association="Self.FK_Account_Member1">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_Category" Association="Self.FK_News_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CateMember1_Member" Association="Self.FK_CateMember1_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="CateMember1" EntitySet="CateMember1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Feedback_News" Association="Self.FK_Feedback_News">
+      <End Role="News" EntitySet="News" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.875" name="WebCNPM">
+  <DataContextMoniker Name="/WebCNPMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="36a7ee10-1a9e-4ab8-87b1-b9332c979351" absoluteBounds="3.5, 8.625, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/WebCNPMDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8abae0fd-c1f1-420b-8c68-eadd4c25f13a" absoluteBounds="3.515, 9.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d64085f-8dd0-41c2-891c-1b038f5f6a98" absoluteBounds="0.75, 1.625, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/WebCNPMDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79868d2d-c8ee-41c6-a91d-02055dbdbaea" absoluteBounds="0.765, 2.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2cbe99e-1d34-4180-9700-212c00817e77" absoluteBounds="3.5, 6, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/WebCNPMDataContext/CateMember1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="075b2e42-5a96-430c-9d1e-e3269d4421ab" absoluteBounds="3.515, 6.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a2aae7c-a002-4c26-b830-2ae36857db3c" absoluteBounds="6.25, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/WebCNPMDataContext/Feedback" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96f841a4-4ee1-4536-a7e5-bfb366e1157b" absoluteBounds="6.265, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eee1d77f-852c-4a16-b245-9eb5d54b1cac" absoluteBounds="6.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/WebCNPMDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81d56df1-a198-4d12-b18f-cb6255af64a6" absoluteBounds="6.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d0ea0cb-6975-42b4-816e-fadc23be4ac4" absoluteBounds="0.75, 7.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/WebCNPMDataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99554832-2dcc-4797-b4a9-5a82c1d737bb" absoluteBounds="0.765, 7.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c84d0082-81f1-4549-9ecb-c3bc1918f3c4" absoluteBounds="3.5, 1, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/WebCNPMDataContext/New" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1240874-2fc7-4216-b936-fc65d6eea798" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44e3ac27-4111-40e6-a761-123c810b98e7" absoluteBounds="6.75, 7.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebCNPMDataContext/Statistic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c3103ec-b00a-4a8a-963d-ae5555506d18" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.04890055338542); (3.5 : 9.04890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebCNPMDataContext/Member/Member_Account" />
+      <nodes>
+        <classShapeMoniker Id="7d0ea0cb-6975-42b4-816e-fadc23be4ac4" />
+        <classShapeMoniker Id="36a7ee10-1a9e-4ab8-87b1-b9332c979351" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.44794840494792); (3.5 : 7.44794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebCNPMDataContext/Member/Member_CateMember1" />
+      <nodes>
+        <classShapeMoniker Id="7d0ea0cb-6975-42b4-816e-fadc23be4ac4" />
+        <classShapeMoniker Id="a2cbe99e-1d34-4180-9700-212c00817e77" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.70274983723958); (6.25 : 2.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebCNPMDataContext/New/New_Feedback" />
+      <nodes>
+        <classShapeMoniker Id="c84d0082-81f1-4549-9ecb-c3bc1918f3c4" />
+        <classShapeMoniker Id="1a2aae7c-a002-4c26-b830-2ae36857db3c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.60659912109375); (3.5 : 2.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebCNPMDataContext/Category/Category_New" />
+      <nodes>
+        <classShapeMoniker Id="0d64085f-8dd0-41c2-891c-1b038f5f6a98" />
+        <classShapeMoniker Id="c84d0082-81f1-4549-9ecb-c3bc1918f3c4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

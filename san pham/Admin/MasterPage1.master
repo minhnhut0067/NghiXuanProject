@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs"
+    Inherits="Admin_MasterPage1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page</title>
+    <link href="CSS/adminstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <link href="CSS/ChiTietTin.css" rel="stylesheet" type="text/css" />
+    <%-- <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }     
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <center>
+    <div>
+        <%--    </div>--%>     
+        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </cc1:ToolkitScriptManager>
+        <table cellpadding="1" cellspacing="1">
+            <tr>
+                <td colspan="2" align="center">
+                    <img src="Image/header.png" style="width: 100%; height: 120px;" />
+                    <div style="font-size: 15px; background-color:#FFFAFA" >  
+                        <table cellpadding="0" cellspacing="0" class="style1">
+                            <tr>
+                            <td style="width:30%"></td>
+                                <td style=" width:40%; text-align:center;" ><b>QUẢN TRỊ WEBSITE<span lang="en-us"> </span></b>
+                    
+                                </td>
+                                <td align="right" >
+                                    <asp:LinkButton ID="lbTrangChu" runat="server"  Font-Bold="True" BorderWidth="0px" Font-Size="17px"
+                                        Font-Underline="False" Height="27px" PostBackUrl="~/Default.aspx"><img src="../images/demo/home_ico.png" style="border:0px" /></asp:LinkButton>
+                                   &nbsp;<asp:LinkButton ID="lbtThoat" runat="server" Font-Bold="True" BorderWidth="0px" Font-Size="17px"
+                                        Font-Underline="False" Height="27px" PostBackUrl="~/Default.aspx" 
+                                        onclick="lbtThoat_Click" ><img src="Image/stop.png" style="border:0px;"/>Thoát</asp:LinkButton>&nbsp;
+                                        </td>
+                            </tr>
+                        </table>
+                    
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:24%" valign="top" align="left" >
+                   <cc1:Accordion ID="Accordion1" Width="99%"  AutoSize="None" FadeTransitions="true"
+                        SuppressHeaderPostbacks="true" runat="server" HeaderCssClass="noidungphanquantri" ContentCssClass="noidungcon" HeaderSelectedCssClass="chonquantri" BorderStyle="Groove" BorderColor="Blue" BorderWidth="1px"
+                        >
+                        <Panes>
+                            <cc1:AccordionPane ID="AccordionPane1" runat="server" >
+                                <Header>
+                                    Quản trị hệ thống</Header>
+                                <Content>
+                                    <a href="ThongTinCaNhan.aspx" class="Link">
+                                        <img src="Image/port.png" border="0"/>
+                                        Thông tin cá nhân</a><br />
+                                    <a href="ChuyenMuc.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Quản lý chuyên mục</a><br />
+                                    <a href="ThanhVien.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Quản trị người dùng</a><br />
+                                        <a href="TaoTaiKhoan.aspx" class="Link">
+                                        <img src="Image/port.png" border="0"  />
+                                        Tạo tài khoản</a><br />
+                                        <a href="QuanLyAnhQuangCao.aspx" class="Link">
+                                        <img src="Image/port.png" border="0"  />
+                                        Banner quảng cáo</a><br />
+                                        <a href="DoiMatKhau1.aspx" class="Link">
+                                        <%--<a href="DoiMatKhau.aspx" class="Link">--%>
+                                        <img src="Image/port.png" border="0"  />
+                                       Thay đổi mật khẩu</a>                                       
+                                        
+                                </Content>
+                            </cc1:AccordionPane>
+                            <cc1:AccordionPane ID="AccordionPane2" runat="server" >
+                                <Header>
+                                    Quản lý bài viết</Header>
+                                <Content>
+                                    <a href="VietBai.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Viết bài</a><br />
+                                         <a href="QuanLyFeedback.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Quản lý Phản hồi</a><br />
+                                    <a href="BaiVietChoDang.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Danh sách các bài viết chờ đăng</a><br />
+                                    <a href="BaiVietDaDang.aspx" class="Link">
+                                        <img src="Image/port.png" border="0" />
+                                        Danh sách các bài viết đã đăng</a>
+                                </Content>
+                            </cc1:AccordionPane>
+                        </Panes>
+                    </cc1:Accordion></td>
+                &nbsp;
+                <td style="width: 73%; height: 700px; padding-top: 2px;" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="textfooter">
+                        <center>
+                            <div style="text-align: center;">
+                                Software Technology
+                            </div>
+                        </center>
+                    </div>
+                    <div>
+                        <img src="Image/footer.png" style="width: 100%; height: 100%;" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </center>
+    </form>
+</body>
+</html>

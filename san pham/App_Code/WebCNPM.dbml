@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SoftwareTechnology" Class="WebCNPMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\SoftwareTechnology.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SoftwareTechnologyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Decendalization" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Member_Account" Member="Member" ThisKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Category_New" Member="News" OtherKey="CategoryID" Type="New" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CateMember1" Member="CateMember1s">
+    <Type Name="CateMember1">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CateTinCongNghe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CateMicrosoft" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CateSun" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CateCongNgheMoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Member_CateMember1" Member="Member" ThisKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="FeedbackID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NameReader" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateComment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="New_Feedback" Member="New" ThisKey="NewsID" Type="New" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image" Member="Images">
+    <Type Name="Image">
+      <Column Name="ImageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LinkImage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageAdvertising" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="Members">
+    <Type Name="Member">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdentityCard" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Member_Account" Member="Accounts" OtherKey="MemberID" Type="Account" />
+      <Association Name="Member_CateMember1" Member="CateMember1" OtherKey="MemberID" Type="CateMember1" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="New_Feedback" Member="Feedbacks" OtherKey="NewsID" Type="Feedback" />
+      <Association Name="Category_New" Member="Category" ThisKey="CategoryID" Type="Category" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Statistic" Member="Statistics">
+    <Type Name="Statistic">
+      <Column Name="StatisticID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostTimeNews" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostMostRead" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VisitNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Login" Method="Login">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="LoginResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Decendalization" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTinNewChuyenMuc" Method="LoadTinNewChuyenMuc">
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTinNewChuyenMucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTinLienQuan" Method="LoadTinLienQuan">
+    <Parameter Name="CateId" Parameter="cateId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTinLienQuanResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTieudetin" Method="LoadTieudetin">
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTieudetinResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Load5BanTinMoi" Method="Load5BanTinMoi">
+    <ElementType Name="Load5BanTinMoiResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Load3TinHot" Method="Load3TinHot">
+    <ElementType Name="Load3TinHotResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_SelectTin" Method="SP_SelectTin">
+    <Parameter Name="idNews" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_SelectTinResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTenChuyenMucCon" Method="LoadTenChuyenMucCon">
+    <Parameter Name="idNews" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTenChuyenMucConResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_UpdateStatus" Method="st_UpdateStatus">
+    <Parameter Name="NewID" Parameter="newID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="error" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Thongtincanhan" Method="Thongtincanhan">
+    <Parameter Name="tendangnhap" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="ThongtincanhanResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Decendalization" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MemberID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdentityCard" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Status1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Load5TinHotCungChuyenMuc" Method="Load5TinHotCungChuyenMuc">
+    <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Load5TinHotCungChuyenMucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_Xoabantin" Method="st_Xoabantin">
+    <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Load5TinMoiCungChuyenMuc" Method="Load5TinMoiCungChuyenMuc">
+    <Parameter Name="NewsId" Parameter="newsId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Load5TinMoiCungChuyenMucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FeedBack1" Method="FeedBack1">
+    <Parameter Name="NewsId" Parameter="newsId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FeedBack1Result">
+      <Column Name="FeedbackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NameReader" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateComment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadQuyen" Method="LoadQuyen">
+    <Parameter Name="MemberID" Parameter="memberID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadQuyenResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_LayCMcontheoCha" Method="st_LayCMcontheoCha">
+    <Parameter Name="categoryid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_LayCMcontheoChaResult">
+      <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="categoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadFeedbackManager" Method="LoadFeedbackManager">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadFeedbackManagerResult">
+      <Column Name="FeedbackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NameReader" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateComment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_UpdateStatusFb" Method="st_UpdateStatusFb">
+    <Parameter Name="FeedbackID" Parameter="feedbackID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="error" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LoadTenChuyenMucCha" Method="LoadTenChuyenMucCha">
+    <Parameter Name="IdNews" Parameter="idNews" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTenChuyenMucChaResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_CayChuyenMuc" Method="st_CayChuyenMuc">
+    <Parameter Name="CateID" Parameter="cateID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_CayChuyenMucResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_LayThanhvien1" Method="st_LayThanhvien1">
+    <ElementType Name="st_LayThanhvien1Result">
+      <Column Name="memberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.idchuyenmuccon" Method="idchuyenmuccon">
+    <Parameter Name="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="idchuyenmucconResult">
+      <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Muccon" Method="Muccon">
+    <Parameter Name="cate" Type="System.Int32" DbType="Int" />
+    <ElementType Name="MucconResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTinTheoChuyenMuc" Method="LoadTinTheoChuyenMuc">
+    <Parameter Name="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTinTheoChuyenMucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TinHotChuyenMucCha" Method="TinHotChuyenMucCha">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TinHotChuyenMucChaResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Search" Method="Search">
+    <Parameter Name="tukhoa" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SearchResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadTinTheoNgay" Method="LoadTinTheoNgay">
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LoadTinTheoNgayResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_QuenMatKhau" Method="st_QuenMatKhau">
+    <Parameter Name="tenDN" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(150)" />
+    <ElementType Name="st_QuenMatKhauResult">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TinHot" Method="TinHot">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TinHotResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Muccon" Method="Muccon1">
+    <Parameter Name="cate" Type="System.Int32" DbType="Int" />
+    <ElementType Name="MucconResult1">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Tenchuyenmuc" Method="Tenchuyenmuc">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TenchuyenmucResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Tentheochuyenmuc" Method="Tentheochuyenmuc">
+    <Parameter Name="categoryid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TentheochuyenmucResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Bantinchuyenmuc" Method="Bantinchuyenmuc">
+    <Parameter Name="category" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BantinchuyenmucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Category_Edit" Method="Category_Edit">
+    <Parameter Name="Action" Parameter="action" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="error" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CayChuyenMuc1" Method="CayChuyenMuc1">
+    <Parameter Name="CateID" Parameter="cateID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CayChuyenMuc1Result">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CayChuyenMuc2" Method="CayChuyenMuc2">
+    <Parameter Name="MemberID" Parameter="memberID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CayChuyenMuc2Result">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChuyenMuc_TruyVan" Method="ChuyenMuc_TruyVan">
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TuKhoa" Parameter="tuKhoa" Type="System.String" DbType="NVarChar(150)" />
+    <ElementType Name="ChuyenMuc_TruyVanResult">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MenuLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Depth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.motchuyenmuc" Method="motchuyenmuc">
+    <Parameter Name="categoryid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="motchuyenmucResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_SelectTinChodang" Method="SP_SelectTinChodang">
+    <Parameter Name="idNews" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_SelectTinChodangResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LoadFeedbackSearch" Method="LoadFeedbackSearch">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DateFrom" Parameter="dateFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DateTo" Parameter="dateTo" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="LoadFeedbackSearchResult">
+      <Column Name="FeedbackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NameReader" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateComment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_DuyettinChoDang" Method="st_DuyettinChoDang">
+    <Parameter Name="idNews" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_DuyettinChoDangResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_thongtinbaiviet" Method="st_thongtinbaiviet">
+    <Parameter Name="Newsid" Parameter="newsid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_thongtinbaivietResult">
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Posttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumRead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="feedback" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

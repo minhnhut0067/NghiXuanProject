@@ -1,0 +1,253 @@
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\obj\Debug\APIDev.csprojResolveAssemblyReference.cache
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\obj\Debug\APIDev.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\APIDev.dll.config
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\APIDev.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\APIDev.pdb
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Antlr3.Runtime.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\EntityFramework.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Data.Edm.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Data.OData.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Newtonsoft.Json.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Net.Http.Formatting.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Spatial.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Helpers.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.OData.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.Tracing.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.WebHost.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Mvc.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Optimization.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Providers.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Razor.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\WebGrease.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\EntityFramework.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Newtonsoft.Json.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Net.Http.Formatting.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Helpers.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.WebHost.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Mvc.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Razor.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.Tracing.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Web.Http.OData.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Data.Edm.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Microsoft.Data.OData.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\System.Spatial.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\de\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\es\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\fr\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\it\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ja\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ko\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ru\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\obj\Debug\APIDev.pdb
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Npgsql.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Npgsql.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\EntityFramework.SqlServer.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Mono.Security.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Npgsql.EntityFramework.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\EntityFramework.SqlServer.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\Npgsql.EntityFramework.xml
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\de\Npgsql.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\es\Npgsql.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\fi\Npgsql.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\fr\Npgsql.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\ja\Npgsql.resources.dll
+C:\Users\PC07\Google Drive\Project\ASP\APIDev\APIDev\bin\zh-CN\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\APIDev.dll.config
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\APIDev.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\APIDev.pdb
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Antlr3.Runtime.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\EntityFramework.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\EntityFramework.SqlServer.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Data.Edm.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Data.OData.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Web.Infrastructure.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Mono.Security.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Newtonsoft.Json.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Npgsql.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Npgsql.EntityFramework.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Net.Http.Formatting.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Spatial.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Helpers.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.OData.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.Tracing.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.WebHost.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Mvc.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Optimization.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Providers.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Razor.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.Deployment.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.Razor.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\WebGrease.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\EntityFramework.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\EntityFramework.SqlServer.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Npgsql.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Npgsql.EntityFramework.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Newtonsoft.Json.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Net.Http.Formatting.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Helpers.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.WebHost.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Mvc.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Razor.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.Deployment.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.WebPages.Razor.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.Tracing.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Web.Http.OData.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Data.Edm.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\Microsoft.Data.OData.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\System.Spatial.xml
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\de\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\es\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\fi\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\fr\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ja\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-CN\Npgsql.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\de\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\es\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\fr\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\it\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ja\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ko\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ru\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\de\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\es\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\fr\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\it\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ja\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ko\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ru\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\de\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\es\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\fr\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\it\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ja\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ko\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\ru\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hans\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\bin\zh-Hant\System.Spatial.resources.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\obj\Debug\APIDev.csprojResolveAssemblyReference.cache
+Z:\Ung Dung\Chung\APIDev\APIDev\obj\Debug\APIDev.dll
+Z:\Ung Dung\Chung\APIDev\APIDev\obj\Debug\APIDev.pdb
+F:\thinh\APIDev\APIDev\bin\APIDev.dll
+F:\thinh\APIDev\APIDev\bin\APIDev.pdb
+F:\thinh\APIDev\APIDev\bin\Antlr3.Runtime.dll
+F:\thinh\APIDev\APIDev\bin\EntityFramework.dll
+F:\thinh\APIDev\APIDev\bin\EntityFramework.SqlServer.dll
+F:\thinh\APIDev\APIDev\bin\Microsoft.Data.Edm.dll
+F:\thinh\APIDev\APIDev\bin\Microsoft.Data.OData.dll
+F:\thinh\APIDev\APIDev\bin\Microsoft.Web.Infrastructure.dll
+F:\thinh\APIDev\APIDev\bin\Mono.Security.dll
+F:\thinh\APIDev\APIDev\bin\Newtonsoft.Json.dll
+F:\thinh\APIDev\APIDev\bin\Npgsql.dll
+F:\thinh\APIDev\APIDev\bin\Npgsql.EntityFramework.dll
+F:\thinh\APIDev\APIDev\bin\System.Net.Http.Formatting.dll
+F:\thinh\APIDev\APIDev\bin\System.Spatial.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Helpers.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.OData.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.Tracing.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.WebHost.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Mvc.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Optimization.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Providers.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.Razor.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.Deployment.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.dll
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.Razor.dll
+F:\thinh\APIDev\APIDev\bin\WebGrease.dll
+F:\thinh\APIDev\APIDev\bin\EntityFramework.xml
+F:\thinh\APIDev\APIDev\bin\EntityFramework.SqlServer.xml
+F:\thinh\APIDev\APIDev\bin\Npgsql.xml
+F:\thinh\APIDev\APIDev\bin\Npgsql.EntityFramework.xml
+F:\thinh\APIDev\APIDev\bin\Newtonsoft.Json.xml
+F:\thinh\APIDev\APIDev\bin\System.Net.Http.Formatting.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Helpers.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.WebHost.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Mvc.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Razor.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.Deployment.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.WebPages.Razor.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.Tracing.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Http.OData.xml
+F:\thinh\APIDev\APIDev\bin\Microsoft.Data.Edm.xml
+F:\thinh\APIDev\APIDev\bin\Microsoft.Data.OData.xml
+F:\thinh\APIDev\APIDev\bin\System.Spatial.xml
+F:\thinh\APIDev\APIDev\bin\de\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\es\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\fi\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\fr\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\ja\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-CN\Npgsql.resources.dll
+F:\thinh\APIDev\APIDev\bin\de\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\es\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\it\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\thinh\APIDev\APIDev\bin\de\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\es\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\fr\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\it\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\ja\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\ko\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\ru\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\thinh\APIDev\APIDev\bin\de\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\es\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\fr\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\it\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\ja\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\ko\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\ru\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hans\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\bin\zh-Hant\System.Spatial.resources.dll
+F:\thinh\APIDev\APIDev\obj\Debug\APIDev.dll
+F:\thinh\APIDev\APIDev\obj\Debug\APIDev.pdb
+F:\thinh\APIDev\APIDev\bin\Antlr3.Runtime.pdb
+F:\thinh\APIDev\APIDev\bin\System.Web.Optimization.xml
+F:\thinh\APIDev\APIDev\bin\System.Web.Providers.xml
+F:\thinh\APIDev\APIDev\obj\Debug\APIDev.csprojResolveAssemblyReference.cache
