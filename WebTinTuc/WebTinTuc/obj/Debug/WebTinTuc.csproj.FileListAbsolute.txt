@@ -28,3 +28,7 @@ D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\EntityFramework.dll
 D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\EntityFramework.SqlServer.dll
 D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\EntityFramework.xml
 D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\EntityFramework.SqlServer.xml
+D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\PagedList.dll
+D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\PagedList.Mvc.dll
+D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\PagedList.xml
+D:\nhut\project\NghiXuanProject\WebTinTuc\WebTinTuc\bin\PagedList.Mvc.xml

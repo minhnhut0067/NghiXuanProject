@@ -10,25 +10,34 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Member.FullName)
+            @Html.ActionLink("FullName", "Index", new { sortOrder = ViewBag.FullNameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.UsernameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            @Html.ActionLink("Password", "Index", new { sortOrder = ViewBag.PasswordSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Decendalization)
+            @Html.ActionLink("Decendalization", "Index", new { sortOrder = ViewBag.DecendalizationSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegistrationDate)
+            @Html.ActionLink("RegistrationDate", "Index", new { sortOrder = ViewBag.RegistrationDateSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.ActionLink("Status", "Index", new { sortOrder = ViewBag.StatusSortParm })
         </th>
         <th></th>
     </tr>
@@ -54,9 +63,9 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Username }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Username }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Username })
+            @Html.ActionLink("Edit", "Edit", new { id=item.AccountID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AccountID}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AccountID })
         </td>
     </tr>
 }
